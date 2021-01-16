@@ -29,6 +29,4 @@ class BookDetailViewModel(application: Application) : AndroidViewModel(applicati
     suspend fun deleteWithViewModel(book: BookDetail) {
         dao.deleteItem(book)
     }
-
-
 }
