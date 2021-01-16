@@ -16,9 +16,12 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/image_view_detail"
+            android:id="@+id/image_book_detail"
             android:layout_width="match_parent"
-            android:layout_height="170dp" />
+            android:layout_height="170dp"
+            android:layout_margin="@dimen/margin_8dp"
+            android:padding="@dimen/margin_8dp"
+            android:textAlignment="center" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -26,34 +29,34 @@
         android:id="@+id/linearLayoutCompat2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat">
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_name_detail"
+            android:id="@+id/text_view_author"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
             android:fontFamily="@font/abel_regular"
             android:scrollbarSize="@dimen/text_size_title"
             android:textColor="#000"
-            tools:text="NONE" />
+            android:textSize="@dimen/text_size_title"
+            app:fontFamily="@font/abel_regular"
+            tools:text="autor" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_description_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:textColor="#000"
-            tools:text="-------NONE-----" />
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_margin="@dimen/margin_8dp"
+        android:background="@color/primary_color"
+        android:gravity="center"
         android:orientation="horizontal"
         android:textColor="#000"
         app:layout_constraintEnd_toEndOf="parent"
@@ -62,27 +65,25 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat2">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/abel_regular"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/robotomono_regular"
+            android:text="title"
+            android:textAlignment="center"
             android:textColor="#000"
-            tools:text="Precio" />
+            android:textSize="@dimen/text_size_title" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_price_detail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
-            android:fontFamily="@font/abel_regular"
-            android:textColor="#000"
-            tools:text="NONE" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:id="@+id/linearLayoutCompat4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_margin="@dimen/margin_8dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -91,18 +92,21 @@
         <androidx.appcompat.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
             android:fontFamily="@font/abel_regular"
             android:textColor="#000"
-            tools:text="Último Precio" />
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="Cant. de páginas" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_last_price_detail"
+            android:id="@+id/text_view_pages"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="@dimen/margin_8dp"
             android:fontFamily="@font/abel_regular"
             android:textColor="#000"
-            tools:text="NONE" />
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="pages" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 
@@ -110,7 +114,8 @@
         android:id="@+id/linearLayoutCompat5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_margin="@dimen/margin_8dp"
+        android:gravity="center"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="@+id/linearLayoutCompat4"
         app:layout_constraintHorizontal_bias="1.0"
@@ -118,32 +123,121 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat4">
 
         <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_country"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
             android:fontFamily="@font/abel_regular"
             android:textColor="#000"
-            tools:text="Admite Crédito? - " />
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="Pais" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/text_view_credito_detail"
+            android:id="@+id/text_view_languaje"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="8dp"
+            android:layout_margin="@dimen/margin_8dp"
             android:fontFamily="@font/abel_regular"
             android:textColor="#000"
-            tools:text="NONE" />
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="languaje" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="languaje" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat5">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size_title"
+            tools:text="price" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_last_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size_title"
+            tools:text="last price" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat6">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="link" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/linearLayoutCompat8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_8dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat7">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/text_view_delivery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_8dp"
+            android:fontFamily="@font/abel_regular"
+            android:textColor="#000"
+            android:textSize="@dimen/text_size_secondary"
+            tools:text="delivery" />
+
     </androidx.appcompat.widget.LinearLayoutCompat>
 
     <androidx.appcompat.widget.LinearLayoutCompat
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="72dp"
+        android:layout_margin="@dimen/margin_8dp"
         android:gravity="center"
-        android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat5">
+        app:layout_constraintTop_toBottomOf="@+id/linearLayoutCompat8">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_go_back_detail"
@@ -164,7 +258,5 @@
             android:text="Enviar Mail"
             android:textAllCaps="false"
             android:textColor="#000" />
-
-
     </androidx.appcompat.widget.LinearLayoutCompat>
 </androidx.constraintlayout.widget.ConstraintLayout>
